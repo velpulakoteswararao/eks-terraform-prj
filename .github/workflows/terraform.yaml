@@ -29,7 +29,9 @@ jobs:
     - name: Setup Terraform
       # Install Terraform CLI
       uses: hashicorp/setup-terraform@v1
-
-    # Destroy the EKS Cluster
+    - name: Terraform Init
+      # Initialize Terraform
+      run: terraform init
     - name: Terraform Destroy
+      # Destroy the EKS Cluster
       run: terraform destroy -auto-approve
