@@ -1,10 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket = "tfstagebucket"
-    key    = "demo.tfstate"
-    region = "us-east-1"
-  }
-}
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
   version         = "20.8.4"
