@@ -1,10 +1,10 @@
-terraform {
-  backend "s3" {
-    bucket = "tfstagebucket"
-    key    = "tfstagebucket.tfstate"
-    region = "us-east-1"
-  }
-}
+#terraform {
+# backend "s3" {
+#  bucket = "tfstagebucket"
+# key    = "tfstagebucket.tfstate"
+#  region = "us-east-1"
+# }
+#}
 
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
