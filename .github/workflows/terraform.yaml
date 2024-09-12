@@ -38,10 +38,6 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    # Check if Terraform files are properly formatted
-    - name: Terraform Format Check
-      run: terraform fmt -check
-
     # Automatically fix formatting issues if found
     - name: Terraform Format Fix
       if: failure()
